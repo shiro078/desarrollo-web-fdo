@@ -1,0 +1,31 @@
+.p1, .p2, .p3, .p4, .p5{
+	font-size: 20px;
+}
+
+.gi-1{
+	
+}
+.p1{
+	background-color: #3498db;
+	font-weight: bold;
+}
+
+.p2{
+	background-color: #e67e22;
+	font-weight: bold;
+}
+
+.p3{
+	background-color: #27ae60;
+	font-weight: bold;
+}
+
+.p4{
+	background-color: #ecf0f1;
+	font-weight: bold;
+}
+
+.p5{
+	background-color: #95a5a6;
+	font-weight: bold;
+}
