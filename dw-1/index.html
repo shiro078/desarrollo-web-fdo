@@ -44,7 +44,66 @@
 			<div class="row">
 				<div class="col-xs-12 col-sm-4 col-md-3">
 					<aside class="sidebar">
-						<div class="panel panel-primary">
+						<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+							  <div class="panel panel-primary">
+							    <div class="panel-heading" role="tab" id="headingOne">
+							      <h4 class="panel-title">
+							        <div role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="cat">
+							          Categorias
+							        </div>
+							      </h4>
+							    </div> 
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingTwo">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+							          Ropa
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+							      <div class="panel-body">
+							        <p><a href="#" >Para Damas</a></p>
+							        <p><a href="#" >Para Hombres</a></p>
+							        <p><a href="#" >Para Niños</a></p>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingThree">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+							          Electronicos
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+							      <div class="panel-body">
+							        <p><a href="#" >Computadoras</a></p>
+							        <p><a href="#" >Telefonos</a></p>
+							        <p><a href="#" >Televisiones</a></p>
+							      </div>
+							    </div>
+							  </div>
+							  <div class="panel panel-default">
+							    <div class="panel-heading" role="tab" id="headingFour">
+							      <h4 class="panel-title">
+							        <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+							          Automotriz
+							        </a>
+							      </h4>
+							    </div>
+							    <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+							      <div class="panel-body">
+							        <p><a href="#" >Partes</a></p>
+							        <p><a href="#" >Autos Usados</a></p>
+							        <p><a href="#" >Accesorios</a></p>
+							      </div>
+							    </div>
+							  </div>
+							</div>
+						<!--<div class="panel panel-primary">
 							  <div class="panel-heading">
 							    	Categorias
 							  </div>
@@ -57,7 +116,7 @@
 							  		<li class="list-group-item">Automotriz</li>
 							  	</ul>
 							  </div>
-						</div>
+						</div>-->
 					</aside>
 				</div>
 			
@@ -113,7 +172,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -124,7 +209,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -135,7 +246,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -146,7 +283,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -157,7 +320,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -168,7 +357,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -179,7 +394,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -190,7 +431,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>
@@ -201,7 +468,33 @@
 							        <h3>Grabadora</h3>
 							        <p>Marca X</p>
 							        <p>$39.99 USD</p>
-							        <p><a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a></p> 
+							        
+							        <!-- Button trigger modal -->
+									<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+									  Ver mas
+									</button>
+									<!-- Modal -->
+									<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+									  <div class="modal-dialog" role="document">
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									        <h4 class="modal-title" id="myModalLabel">Television X</h4>
+									      </div>
+									      <div class="modal-body">
+									      	<div>
+									      		<img src="http://placehold.it/850x450" alt="">
+									      		<p>But why smiling man her imagine married. Chiefly can man her out believe manners cottage colonel unknown. Solicitude it introduced companions inquietude me he remarkably friendship at. My almost or horses period. Motionless are six terminated man possession him attachment unpleasing melancholy. Sir smile arose one share. No abroad in easily relied an whence lovers temper by. Looked wisdom common he an be giving length mr. </p>
+									      	</div>
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button> 
+									      </div>
+									    </div>
+									  </div>
+									</div>
+
+							        <a href="#" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
 							      </div>
 							    </div>
 							</div>

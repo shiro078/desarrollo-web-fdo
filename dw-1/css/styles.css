@@ -5,3 +5,11 @@ td > p{
 .inicio{
 	margin-top: 5px;
 }
+
+img{
+	width: 100%;
+}
+
+#carousel-example-generic{
+	margin-bottom: 15px;
+}
