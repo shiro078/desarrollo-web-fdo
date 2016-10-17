@@ -9,3 +9,25 @@
 .thumbnails{
 	margin-top: 15px;
 }
+.category{
+	position:relative;
+}
+
+.login{
+	margin-top: 50px;
+}
+.menu-title{
+	text-align: center;
+}
+.title{
+	position: absolute;
+	right: 0;
+	top: 0;
+	background-color: #2980b9;
+	padding: 10px;
+	color: white;
+}
+
+.txt{
+	padding-top: 25px;
+}
