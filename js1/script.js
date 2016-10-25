@@ -32,35 +32,35 @@ do{
 	console.log(cuenta);
 }while(isNaN(cuenta)){
 	alert("Bienvenido");
-}
-
-do{
+	do{
 	var opcion = Number(prompt("Gracias por introducir su numero de cuenta que desea hacer \n"
 	+ "Elija una de las siguientes opciones \n"
 	+ "1. Retirar dinero \n"
 	+ "2. Depositar dinero \n"
 	+ "3. Revisar mi saldo \n"));
-}while(!(opcion >= 1 && opcion <=3)){
-		if( opcion === 1 ){
-			do{
-				var retiro = Number(prompt("Por favor introduce la cantidad a retirar: "));
-			}while((retiro <= saldo)&& !isNaN(retiro)){
-				alert("Usted retiro: " + retiro + " pesos");
-				saldo = saldo - retiro;
-				alert("Su saldo es: " + saldo + " pesos");
+	}while(!(opcion >= 1 && opcion <=3)){
+			if( opcion === 1 ){
+				do{
+					var retiro = Number(prompt("Por favor introduce la cantidad a retirar: "));
+				}while(isNaN(retiro)||(!(retiro <= saldo))){
+					alert("Usted retiro: " + retiro + " pesos");
+					saldo = saldo - retiro;
+					alert("Su saldo es: " + saldo + " pesos");
+				}
+			} else if( opcion === 2 ){
+				do{
+					var deposito = Number(prompt("Por favor introduce la cantidad a depositar: "));
+				}while(isNaN(deposito)){
+					saldo = saldo + deposito;
+					alert("Su saldo es: " + saldo + " pesos");
+				}
+			} else if( opcion === 3 ){
+					alert("Su saldo es: " + saldo + " pesos");
 			}
-		} else if( opcion === 2 ){
-			var deposito = Number(prompt("Por favor introduce la cantidad a depositar: "));
-			if(isNaN(deposito)){
-				alert("Por favor introduzca solo numeros.");
-			}else{
-				saldo = saldo + deposito;
-				alert("Su saldo es: " + saldo + " pesos");
-			}
-		} else if( opcion === 3 ){
-				alert("Su saldo es: " + saldo + " pesos");
-		}
+	}
 }
+
+
 	
 	
 
