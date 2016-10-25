@@ -52,7 +52,7 @@ do{
 					var deposito = Number(prompt("Por favor introduce la cantidad a depositar: "));
 				}while(isNaN(deposito)){
 					saldo = saldo + deposito;
-					alert("Su saldo es: " + saldo + " pesos");
+					alert("Deposito: " + deposito + " pesos\n"+"Su saldo es: " + saldo + " pesos");
 				}
 			} else if( opcion === 3 ){
 					alert("Su saldo es: " + saldo + " pesos");
