@@ -7,17 +7,43 @@
 	<title>Javascript 1</title>
 	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/styles.css">
-	<script src="script.js"></script>
+	<!--<script src="script.js"></script>-->
+	
 </head>
 <body>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12">
-				
+				<h2>Lectura de DOM</h2>
+				<form>
+					<div class="form-group">
+						<label for="Email">Email </label>
+    					<input type="email" class="form-control" id="Email" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="Email2">Confirme Email </label>
+    					<input type="email" class="form-control" id="Email2" placeholder="Email">
+    					<div id="c1" onclick="hide()">
+    						
+    					</div>
+					</div>
+					<div class="form-group">
+						<label for="Name">Nombre</label>
+    					<input type="text" class="form-control" id="Name" placeholder="Nombre">
+					</div>
+					<div class="form-group">
+						<label for="Age">Edad</label>
+    					<input type="number" class="form-control" id="Age" placeholder="Edad">
+					</div>
+					<input type="button" class="pull-right" value="Submit" onclick="Validar()">
+				</form>
+				<div id="contenido">
+					
+				</div>
 			</div>
 		</div>
 	</div>
-
+	<script src="script2.js"></script>
 	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
 	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

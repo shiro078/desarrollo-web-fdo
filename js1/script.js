@@ -24,7 +24,7 @@ console.log("False || True: " + (false||true));
 console.log("False || False: " + (false||false));*/
 
 //Lectura Lunes 24 de Oct
-var saldo = 500;
+/*var saldo = 500;
 
 
 do{
@@ -59,11 +59,56 @@ do{
 			}
 	}
 }
+*/
 
+//Ejercicio de funciones
+var compare = function(v1,v2){
+	if((isNaN(v1))&&(isNaN(v2))){
+		console.log("Los valores no se pueden comparar.");
+	}else if(v1 > v2){
+		return v2;
+	}else if(v1 < v2){
+		return v1;
+	}else if(isNaN(v1)){
+		console.log(v1 + " is not a number.");
+		return v2;
+	}else{
+		console.log(v2 + " is not a number.")
+		return v1;
+	}
+}
 
+var contarB = function(str){
+	var found = 0;
+	for(var i=0;i<str.length;i++){
+		if(str.charAt(i) === "B"){
+			found += 1; 
+		}
+	}
+	console.log("En " + str + " se encontro B " + found + " veces.");
+	return found;
+}
+
+var contarCaracteres = function(str,chr){
+	var found = 0;
+	for(var i=0;i<str.length;i++){
+		if(str.charAt(i) === chr){
+			found += 1; 
+		}
+	}
+	console.log("En " + str + " se encontro " + chr + " " + found + " veces.");
+	return found;
+}
+
+console.log(compare("a","b"));
+console.log(compare(5,3));
+console.log(compare("a",3));
+console.log(compare(3,"b"));
+console.log(compare(3,5));
 	
 	
-
+console.log(contarB("BBbBBhjkjkhjkB"));
+console.log(contarCaracteres("BBbbbbBBB","C"));
 
 
 
