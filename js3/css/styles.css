@@ -1,0 +1,13 @@
+.contenedor{
+	margin-top: 15px;
+}
+
+.d1, .d2, .d3{
+	display:inline;
+	border:solid black;
+	width: 500px;
+	height: 300px;
+	padding: 8px 25px;
+	background-color: black;
+
+}

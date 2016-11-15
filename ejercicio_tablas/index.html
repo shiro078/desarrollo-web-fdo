@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ejercicio Tablas</title>
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+	<!-- Modal -->
+	<div class="modal fade" id="modalProducto" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img src="./img/tech_product.jpeg" class="img-responsive">
+	        <p>
+	        	Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce gravida libero metus, ut vehicula arcu fringilla sit amet. Aenean eros ligula, sodales consequat elit quis, blandit consectetur orci. Proin elementum blandit felis.	
+	        </p>
+	      </div>
+	    </div>
+	  </div>
+	</div><!-- fin del modal -->
+	<nav class="navbar navbar-default">
+	  <div class="container">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Brand</a>
+	    </div>
+
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="index.html">Inicio <span class="sr-only">(current)</span></a></li>
+	        <li><a href="pagos.html">Pagos</a></li>
+	      </ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav><!-- fin -->
+
+	<div class="container ">
+		<div class="row" id="c1">
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<aside class="categorias_productos">
+					  	<div class="panel panel-primary">
+						    <div class="panel-heading">
+						      	<a href="#" class="cat" id="categoria1" onclick="display1();">Categoria 1</a>
+						    </div>
+					    </div>
+					    <div class="panel panel-primary">
+						    <div class="panel-heading">
+						      	<a href="#" class="cat" id="categoria2" onclick="display2();">Categoria 2</a>
+						    </div>
+					    </div>
+					    <div class="panel panel-primary">
+						    <div class="panel-heading">
+						      	<a href="#" class="cat" id="categoria3" onclick="display3();">Categoria 3</a>
+						    </div>
+					    </div>
+
+				</aside>
+		</div>
+		<!--<div class="col-xs-12 col-sm-8 col-md-9">
+				
+
+		</div>-->	
+	</div>
+	<script src="script.js"></script>
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

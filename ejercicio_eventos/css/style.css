@@ -1,0 +1,22 @@
+.colores{
+	margin-top: 50px;
+}
+.ocultar{
+	display: none;
+}
+.mostrar{
+	display: block;
+	height: 300px;
+}
+.bgAzul{
+	background-color: #3498db;
+}
+.bgRojo{
+	background-color: #e74c3c;
+}
+.bgVerde{
+	background-color: #2ecc71;
+}
+.bgColores{
+	margin-top: 30px;
+}
