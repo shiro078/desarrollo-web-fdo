@@ -43,16 +43,16 @@ function cambiarColor(){
 
 		contenedorAzul.classList.toggle("mostrar");
 		contenedorAzul.classList.toggle("ocultar");*/
-		cont(contenedorRojo,contenedorVerde,contenedorAzul);
+		cont2(contenedorAzul);
 	}else if(this.id === "btnRojo"){
 		// Aseguramos que se desaparezca los otros contenedores si estan visibles
 		// en ese momento
 
-		cont(contenedorAzul,contenedorVerde,contenedorRojo);
+		cont2(contenedorRojo);
 	}else{
 		// Aseguramos que se desaparezca los otros contenedores si estan visibles
 		// en ese momento
-		cont(contenedorAzul,contenedorRojo,contenedorVerde);
+		cont2(contenedorVerde);
 	}
 }
 
@@ -68,4 +68,47 @@ function cont(contenedor1,contenedor2,contenedor3){
 
 		contenedor3.classList.toggle("mostrar");
 		contenedor3.classList.toggle("ocultar");
+}
+
+function cont2(contenedor){
+			if(contenedor == "contenedorAzul"){
+				if(contenedorRojo.classList.contains("mostrar")){
+				contenedorRojo.classList.toggle("mostrar");
+				contenedorRojo.classList.toggle("ocultar");
+				}
+				if(contenedorVerde.classList.contains("mostrar")){
+					contenedorVerde.classList.toggle("mostrar");
+					contenedorVerde.classList.toggle("ocultar");
+				}
+
+				contenedor.classList.toggle("mostrar");
+				contenedor.classList.toggle("ocultar");
+			}
+			else if(contenedor === "contenedorRojo"){
+				if(contenedorAzul.classList.contains("mostrar")){
+				contenedorAzul.classList.toggle("mostrar");
+				contenedorAzul.classList.toggle("ocultar");
+				}
+				if(contenedorVerde.classList.contains("mostrar")){
+					contenedorVerde.classList.toggle("mostrar");
+					contenedorVerde.classList.toggle("ocultar");
+				}
+
+				contenedor.classList.toggle("mostrar");
+				contenedor.classList.toggle("ocultar");
+			}
+			else if(contenedor === "contenedorVerde"){
+				if(contenedorAzul.classList.contains("mostrar")){
+				contenedorAzul.classList.toggle("mostrar");
+				contenedorAzul.classList.toggle("ocultar");
+				}
+				if(contenedorRojo.classList.contains("mostrar")){
+					contenedorRojo.classList.toggle("mostrar");
+					contenedorRojo.classList.toggle("ocultar");
+				}
+
+				contenedor.classList.toggle("mostrar");
+				contenedor.classList.toggle("ocultar");
+			}
+			
 }
