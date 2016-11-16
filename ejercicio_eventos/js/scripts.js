@@ -6,10 +6,12 @@ var btnAzul = document.querySelector("#btnAzul");
 var btnRojo = document.querySelector("#btnRojo");
 var btnVerde = document.querySelector("#btnVerde");
 
+
 // Obtengo los div contenedores de los colores.
 var contenedorAzul = document.querySelector("#pintaAzul");
 var contenedorRojo = document.querySelector("#pintaRojo");
 var contenedorVerde = document.querySelector("#pintaVerde");
+//var contarray = [contenedorAzul,contenedorRojo,contenedorVerde];
 
 
 /*console.log(btnAzul);
@@ -71,7 +73,7 @@ function cont(contenedor1,contenedor2,contenedor3){
 }
 
 function cont2(contenedor){
-			if(contenedor == "contenedorAzul"){
+			if(contenedor.id === "pintaAzul"){
 				if(contenedorRojo.classList.contains("mostrar")){
 				contenedorRojo.classList.toggle("mostrar");
 				contenedorRojo.classList.toggle("ocultar");
@@ -84,7 +86,7 @@ function cont2(contenedor){
 				contenedor.classList.toggle("mostrar");
 				contenedor.classList.toggle("ocultar");
 			}
-			else if(contenedor === "contenedorRojo"){
+			else if(contenedor.id === "pintaRojo"){
 				if(contenedorAzul.classList.contains("mostrar")){
 				contenedorAzul.classList.toggle("mostrar");
 				contenedorAzul.classList.toggle("ocultar");
@@ -97,7 +99,7 @@ function cont2(contenedor){
 				contenedor.classList.toggle("mostrar");
 				contenedor.classList.toggle("ocultar");
 			}
-			else if(contenedor === "contenedorVerde"){
+			else if(contenedor.id === "pintaVerde"){
 				if(contenedorAzul.classList.contains("mostrar")){
 				contenedorAzul.classList.toggle("mostrar");
 				contenedorAzul.classList.toggle("ocultar");
