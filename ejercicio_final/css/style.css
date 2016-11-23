@@ -1,0 +1,58 @@
+.inicio-categorias{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.inicio-categorias__categoria{
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	overflow: hidden;
+}
+.categoria_personajes{
+	background: url('../img/categoria_personajes.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.categoria_mundos{
+	background: url('../img/categoria_mundos.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.categoria_naves{
+	background: url('../img/categoria_naves.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.inicio-categorias__etiqueta{
+	position: absolute;
+	bottom: 0;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: rgba(0,0,0,.70);
+	width: 100%;
+	text-align: center;
+	font-weight: 700;
+}
+
+.footer{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	background-color: #212121;
+}
+.footer-mapa, .footer-mapa ul > li > a{
+	color: #fff;
+}
+.footer-redes{
+	float: right;
+}
+.footer-redes__icon{
+	padding-top: 10px;
+	width: 42px;
+}
+.loader{
+	padding-top: 100px;
+	padding-bottom: 100;
+}

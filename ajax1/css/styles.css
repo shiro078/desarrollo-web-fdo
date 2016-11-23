@@ -10,3 +10,11 @@
 .icons{
 	margin-top: 50px;
 }
+
+.title, .links{
+	color:#34495e;
+}
+
+.f{
+	background-color: #ecf0f1;
+}
