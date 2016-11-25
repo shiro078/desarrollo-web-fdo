@@ -27,7 +27,7 @@
 	    <!-- Collect the nav links, forms, and other content for toggling -->
 	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Inicio</a></li>
+	        <li class="active"><a href="#" onclick="location.reload();">Inicio</a></li>
 	        <li><a href="#">Personajes</a></li>
 	        <li><a href="#">Mundos</a></li>
 	        <li><a href="#">Naves</a></li>
@@ -36,6 +36,7 @@
 	  </div><!-- /.container-fluid -->
 	</nav>
 
+	<!-- Dentro de este div cargamos el contenido de las paginas -->
 	<div id="contenido-principal">
 		
 	</div>
@@ -47,9 +48,9 @@
 					<h3>Sitio</h3>
 					<ul class="list-unstyled">
 						<li><a href="#">Inicio</a></li>
-						<li><a href="#">Personajes</a></li>
-						<li><a href="#">Mundos</a></li>
-						<li><a href="#">Naves</a></li>
+						<li><a href="#" onclick="$sw.cargaCategoryList('http://swapi.co/api/people/')">Personajes</a></li>
+						<li><a href="#" onclick="$sw.cargaCategoryList('http://swapi.co/api/planets/')">Mundos</a></li>
+						<li><a href="#" onclick="$sw.cargaCategoryList('http://swapi.co/api/starships/')">Naves</a></li>
 					</ul>
 				</div>
 				<div class="col-xs-6">
