@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Template</title>
+	<script src="./angular.min.js"></script>
+</head>
+<!-- ng-app es una ejemplo de directiva de angular -->
+<body ng-app="miApp">
+	
+	<div ng-controller="MiPrimerControlador">
+		<h2>Prueba de Controlador</h2>
+		Introduce un Texto: <input type="text" ng-model="nombre" ng-keyup="muestraNumeros();">
+		<div>
+			El tamaño (length) del texto es: {{largo}}
+		</div>
+		<div>
+			El valor total numerico del nombre es: {{valorTotal}}
+		</div>
+	</div>	
+	<script>
+		angular.module("miApp", []).controller("MiPrimerControlador", function($scope){
+				  $scope.nombre = "";
+				  $scope.largo = 0;
+				  $scope.valorTotal = 0;
+
+				  $scope.muestraNumeros = function () {
+				    var totalValorNombre = calcularNumerosPorString($scope.nombre);
+				    var totallength = calcularLargo($scope.nombre);
+				    $scope.valorTotal = totalValorNombre;
+				    $scope.largo = totallength;
+				  };
+
+				  function calcularLargo(string){
+				  	var totallength = string.length;
+				  	return totallength;
+				  }
+
+				  function calcularNumerosPorString(string) {
+				    var totalValorString = 0;
+				    for (var i = 0; i < string.length; i++) {
+				      totalValorString += string.charCodeAt(i);
+				    }
+
+				    return totalValorString;
+				  }
+			});
+
+	</script>
+</body>
+</html>
