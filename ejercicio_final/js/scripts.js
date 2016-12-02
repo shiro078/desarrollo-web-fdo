@@ -64,16 +64,16 @@
 
 	function crearHtml2(personajes){
 		$ajaxUtils.sendGetRequest(fullinfo, function(template){
-			var resultados = JSON.parse(personajes).results;
+			var resultados = JSON.parse(personajes);
 
 			var finalHtml = "<div class='container'>";
 			finalHtml += "<div class='row'>";
-			for(var i=0;i<resultados.length;i++){
+			for (key in resultados){
 				var html = template;
-				var objarray = Object.values(resultados[i]);
-				var proparray = Object.keys(resultados[i]);
+				var objarray = Object.values(resultados[key]);
+				var proparray = Object.keys(resultados[key]);
 
-				html += "<p>" + proparray[i] + ": " + objarray[i] + "</p>";
+				html += "<p>" +"<b>"+ key +"</b>"+ ": " + resultados[key]+ "</p>";
 
 				finalHtml += html;
 
@@ -100,6 +100,9 @@
 				var html = template;
 
 				var name = resultados[i].name;
+				var url = resultados[i].url;
+				console.log(typeof url);
+				html = insertarPropiedad(html, "url", url);
 				//html = html.replace("#",resultados[i].url);
 				if(resultados[i].hasOwnProperty('gender')){
 					var gender = resultados[i].gender;
