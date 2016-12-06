@@ -21,7 +21,7 @@
 					nombre: "Abraham",
 					apellido: "Garcia",
 					usuario: "abraganu",
-					fecha_nacimiento: new Date("July 25, 1986"),
+					fecha_nacimiento: new Date("1986/07/25"),
 					email: "abraganu@gmail.com",
 					departamento: "IT",
 					success: false
@@ -87,35 +87,12 @@
 				$scope.propiedad = prop;
 			}
 
-			$scope.cambiaClase = function(index){
+			$scope.remover = function(index){
 
-				if($scope.personas[index].success){
-					$scope.personas[index].success = false;
-				}else{
-					$scope.personas[index].success = true;
-				}
+				$scope.personas.splice(index,1);
 				
 			}
 
-			$scope.cambiaClase2 = function(index){
-
-				if($scope.personas[index].warning){
-					$scope.personas[index].warning = false;
-				}else{
-					$scope.personas[index].warning = true;
-				}
-				
-			}
-
-			$scope.cambiaClase3 = function(index){
-
-				if($scope.personas[index].danger){
-					$scope.personas[index].danger = false;
-				}else{
-					$scope.personas[index].danger = true;
-				}
-				
-			}
 
 		}
 

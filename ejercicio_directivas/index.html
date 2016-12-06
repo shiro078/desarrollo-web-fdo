@@ -24,23 +24,14 @@
 									<div class="col-xs-12 col-sm-3">
 										<input type="text" placeholder="Busqueda" 
 											class="form-control"
-											ng-model="textoBusqueda">
+											ng-model="textoBusqueda.apellido">
 									</div>
 									<div class="col-xs-12 col-md-9">
 										<div class="table-head_botones pull-right">
-											<label for="">Ordenar:</label>
+											<label for="">Ordenar por:</label>
 											<div class="btn-group" role="group">
-												<button class="btn btn-primary" 
-														ng-click="ordena('nombre')"
-														ng-blur="ordena(null)">
-														Nombre
-												</button>
 												<button class="btn btn-primary"
-														ng-click="ordena('departamento')"
-														ng-blur="ordena(null)">Departamento
-												</button>
-												<button class="btn btn-primary"
-														ng-click="ordena('fecha')"
+														ng-click="ordena('fecha_nacimiento')"
 														ng-blur="ordena(null)">Fecha
 												</button>
 											</div>
@@ -58,17 +49,15 @@
 											<th>Apellido</th>
 											<th>Usuaurio</th>
 											<th>Fecha Nacimiento</th>
-											<th>Email</th>
 											<th>Departamento</th>
 											<th>Activa</th>
-											<th>Inactiva</th>
-											<th>Pendiente</th>
+
 										</tr>
 									</thead>
 									<tbody>
 										<tr ng-repeat="persona in personas 
-														| filter:textoBusqueda 
-														| orderBy:propiedad"
+														| filter:textoBusqueda
+														| orderBy:'fecha_nacimiento'"
 											ng-class="{success: persona.success, danger: persona.danger, warning: persona.warning}">
 											<!-- En todo ng-repeat angular nos crea una variable contiene el indice del array y lo muestra, esta variable es $index -->
 											<td>{{$index}}</td>
@@ -76,14 +65,11 @@
 											<td>{{persona.apellido}}</td>
 											<td>{{persona.usuario}}</td>
 											<td>{{persona.fecha_nacimiento | date}}</td>
-											<td>{{persona.email}}</td>
 											<td>{{persona.departamento}}</td>
 											<!-- <td class="text-center"><input type="checkbox" ng-model="activa"></td>
 											<td class="text-center"><input type="checkbox" ng-model="inactiva"></td>
 											<td class="text-center"><input type="checkbox" ng-model="pendiente"></td> -->
-											<td><button type="button" class="btn btn-success" ng-click="cambiaClase($index)">Activo</button></td>
-											<td><button type="button" class="btn btn-success" ng-click="cambiaClase2($index)">Inactivo</button></td>
-											<td><button type="button" class="btn btn-success" ng-click="cambiaClase3($index)">Pendiente</button></td>
+											<td><button type="button" class="btn btn-success" ng-click="remover($index)">Borrar</button></td>
 										</tr>
 									</tbody>
 								</table>
