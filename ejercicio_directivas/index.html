@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Controladores y filtros</title>
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body ng-app="DirectivasApp">
+	
+	<section class="usuarios" ng-controller="MiControlador">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							Usuarios
+						</div>
+						<div class="panel-body">
+							<div class="table-head">
+								<div class="row">
+									<div class="col-xs-12 col-sm-3">
+										<input type="text" placeholder="Busqueda" 
+											class="form-control"
+											ng-model="textoBusqueda">
+									</div>
+									<div class="col-xs-12 col-md-9">
+										<div class="table-head_botones pull-right">
+											<label for="">Ordenar:</label>
+											<div class="btn-group" role="group">
+												<button class="btn btn-primary" 
+														ng-click="ordena('nombre')"
+														ng-blur="ordena(null)">
+														Nombre
+												</button>
+												<button class="btn btn-primary"
+														ng-click="ordena('departamento')"
+														ng-blur="ordena(null)">Departamento
+												</button>
+												<button class="btn btn-primary"
+														ng-click="ordena('fecha')"
+														ng-blur="ordena(null)">Fecha
+												</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+							<div class="table-responsive">
+								<table class="table table-bordered">
+									<thead>
+										<tr>
+											<th>No</th>
+											<th>Nombre</th>
+											<th>Apellido</th>
+											<th>Usuaurio</th>
+											<th>Fecha Nacimiento</th>
+											<th>Email</th>
+											<th>Departamento</th>
+											<th>Activa</th>
+											<th>Inactiva</th>
+											<th>Pendiente</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr ng-repeat="persona in personas 
+														| filter:textoBusqueda 
+														| orderBy:propiedad"
+											ng-class="{success: persona.success, danger: persona.danger, warning: persona.warning}">
+											<!-- En todo ng-repeat angular nos crea una variable contiene el indice del array y lo muestra, esta variable es $index -->
+											<td>{{$index}}</td>
+											<td>{{persona.nombre}}</td>
+											<td>{{persona.apellido}}</td>
+											<td>{{persona.usuario}}</td>
+											<td>{{persona.fecha_nacimiento | date}}</td>
+											<td>{{persona.email}}</td>
+											<td>{{persona.departamento}}</td>
+											<!-- <td class="text-center"><input type="checkbox" ng-model="activa"></td>
+											<td class="text-center"><input type="checkbox" ng-model="inactiva"></td>
+											<td class="text-center"><input type="checkbox" ng-model="pendiente"></td> -->
+											<td><button type="button" class="btn btn-success" ng-click="cambiaClase($index)">Activo</button></td>
+											<td><button type="button" class="btn btn-success" ng-click="cambiaClase2($index)">Inactivo</button></td>
+											<td><button type="button" class="btn btn-success" ng-click="cambiaClase3($index)">Pendiente</button></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>			
+		</div>
+	</section>
+
+
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+</html>
