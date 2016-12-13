@@ -26,7 +26,7 @@
 											class="form-control"
 											ng-model="textoBusqueda.apellido">
 									</div>
-									<div class="col-xs-12 col-md-9">
+									<!--<div class="col-xs-12 col-md-9">
 										<div class="table-head_botones pull-right">
 											<label for="">Ordenar por:</label>
 											<div class="btn-group" role="group">
@@ -36,7 +36,7 @@
 												</button>
 											</div>
 										</div>
-									</div>
+									</div>-->
 								</div>
 								
 							</div>
@@ -50,7 +50,7 @@
 											<th>Usuaurio</th>
 											<th>Fecha Nacimiento</th>
 											<th>Departamento</th>
-											<th>Activa</th>
+											<th>Borrar</th>
 
 										</tr>
 									</thead>
@@ -69,7 +69,7 @@
 											<!-- <td class="text-center"><input type="checkbox" ng-model="activa"></td>
 											<td class="text-center"><input type="checkbox" ng-model="inactiva"></td>
 											<td class="text-center"><input type="checkbox" ng-model="pendiente"></td> -->
-											<td><button type="button" class="btn btn-success" ng-click="remover($index)">Borrar</button></td>
+											<td><button type="button" class="btn btn-danger" ng-click="remover($index)">Borrar</button></td>
 										</tr>
 									</tbody>
 								</table>

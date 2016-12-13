@@ -1,0 +1,12 @@
+.lista{
+	padding-bottom: 15px;
+}
+
+.alert{
+	display:none;
+}
+@media(max-width: 766px){
+	#nombreItem, #cantidad{
+	margin-bottom: 10px;
+	}
+}

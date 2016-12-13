@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Filtros avanzados</title>
+	<link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body ng-app="ServiciosAngular">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1>Servicios Customizados</h1>
+					<!-- AgregarListaCompraController as agregaLista -->
+					<div class="form-group form-inline" ng-controller="AgregarListaCompraController as agregaLista">
+						<input class="form-control" type="text" id="nombreItem" ng-model="agregaLista.nombreItem" placeholder="Nombre del Item" required>
+						<input class="form-control" type="text" id="cantidad" ng-model="agregaLista.cantidadItem" placeholder="Cantidad" required>
+						<button class="btn btn-primary" ng-click="agregaLista.agregarItem();">Agrega un Item a tu Lista de Compra</button>
+						<div class="alert alert-danger alert-dismissible" id="alerta" role="alert">
+						  <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+						  	Favor de llenar los dos campos!
+						</div>
+					</div>
+					<!-- MuestraListaCompraController as muestraLista -->
+					<div ng-controller="MuestraListaCompraController as muestraLista" class="panel panel-primary">
+						<div class="panel-heading">
+							<div class="panel-title">
+								To buy/get
+							</div>
+						</div>
+						<div class="panel-body">
+							<ol>
+								<li class="lista" ng-repeat="item in muestraLista.items">
+									{{ item.cantidad }} {{ item.nombre }}
+									<button ng-click="muestraLista.removerItem($index);">Remover Item</button>
+								</li>
+							</ol>
+						</div>
+					</div>
+			</div>
+		</div>
+	</div>
+	
+	<script src="./bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="./bower_components/angular/angular.min.js"></script>
+	<script src="./js/app.js"></script>
+</body>
+</html>
