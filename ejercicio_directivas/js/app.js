@@ -3,20 +3,51 @@
 	'use strict'
 
 	angular.module('DirectivasApp', [])
-		.controller('MiControlador', MiControlador);
+		.controller('MostrarUsuariosControlador', MostrarUsuariosControlador)
+		.controller('AgregarUsuariosControlador',AgregarUsuariosControlador)
+		.service('UsuariosService',UsuariosService);
 
-		function MiControlador($scope){
-			// Una buena practica es poner todas las propiedades del objeto $scope arriba de 
-			// toda la implementacion del controlador, ya que asi podemos saber rapidamente
-			// todas las propiedades que estan en lazadas a la vista y al controlador.
-			$scope.personas = [];
-			$scope.ordena = "";
-			$scope.propiedad = null;
-			$scope.activa = false;
 
-			console.log($scope.activa);
+		MostrarUsuariosControlador.$inject =['UsuariosService'];
+		function MostrarUsuariosControlador(UsuariosService){
+			var mostrarLista = this;
 
-			$scope.personas = [
+			mostrarLista.personas = UsuariosService.obtenerUsuarios();
+
+			mostrarLista.remover = function(indice){
+				console.log(indice);
+				UsuariosService.eliminarUsuario(indice);
+			}
+		}
+
+		AgregarUsuariosControlador.$inject = ['UsuariosService'];
+		function AgregarUsuariosControlador(UsuariosService){
+			var agregarUsuario = this;
+
+			agregarUsuario.nombre = "";
+			agregarUsuario.apellido = "";
+			agregarUsuario.usuario = "";
+			agregarUsuario.fnacimiento = new Date("");
+			agregarUsuario.dpto = "";
+
+			agregarUsuario.AgregarUsuario = function(){
+				if(agregarUsuario.nombre !== "" && agregarUsuario.apellido !== ""){
+					UsuariosService.agregarUsuario(agregarUsuario.nombre,agregarUsuario.apellido,agregarUsuario.usuario,agregarUsuario.fnacimiento,agregarUsuario.dpto);
+				}
+			}
+
+		}
+		function UsuariosService(){
+			var servicio = this;
+
+			var personas = [];
+			var ordena = "";
+			//$scope.propiedad = null;
+			var activa = false;
+
+			//console.log($scope.activa);
+
+			var personas = [
 				{
 					nombre: "Abraham",
 					apellido: "Garcia",
@@ -34,8 +65,7 @@
 					email: "fercruz@company.com",
 					departamento: "IT",
 					success: false,
-					danger: false,
-					warning: false
+
 				},
 				{
 					nombre: "Jesus",
@@ -45,8 +75,7 @@
 					email: "jecepeda@company.com",
 					departamento: "IT",
 					success: false,
-					danger: false,
-					warning: false
+
 				},
 				{
 					nombre: "Jorge",
@@ -56,8 +85,7 @@
 					email: "jopino@gmail.com",
 					departamento: "Finanzas",
 					success: false,
-					danger: false,
-					warning: false
+
 				},
 				{
 					nombre: "Edgar",
@@ -67,8 +95,7 @@
 					email: "eganu@gmail.com",
 					departamento: "Finanzas",
 					success: false,
-					danger: false,
-					warning: false
+
 				},
 				{
 					nombre: "Sandra",
@@ -78,22 +105,31 @@
 					email: "sper@company.com",
 					departamento: "RH",
 					success: false,
-					danger: false,
-					warning: false
 				}
 			];
 
-			$scope.ordena = function(prop){
-				$scope.propiedad = prop;
-			}
+			servicio.agregarUsuario = function(nombre, apellido,usuario,fecha_nacimiento, departamento){
+				var persona = {
+					nombre: nombre,
+					apellido: apellido,
+					usuario: usuario,
+					fecha_nacimiento: new Date(fecha_nacimiento),
+					departamento: departamento
+				};
 
-			$scope.remover = function(index){
 
-				$scope.personas.splice(index,1);
-				
-			}
+				personas.push(persona);
+			};
 
+			servicio.eliminarUsuario = function(indice){
+			
+				personas.splice(indice, 1);
+			};
 
+			servicio.obtenerUsuarios = function(){
+				return personas;
+			};
 		}
+
 
 })();

@@ -9,8 +9,25 @@
 	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body ng-app="DirectivasApp">
-	
-	<section class="usuarios" ng-controller="MiControlador">
+	<section ng-controller="AgregarUsuariosControlador as agregarUsuario">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-10">
+					<input class="form-control" type="text" id="nombreItem" ng-model="agregarUsuario.nombre" placeholder="Nombre de la Persona" required>
+					
+					<input class="form-control" type="text" id="apellido" ng-model="agregarUsuario.apellido" placeholder="Apellido" required>
+					
+					<input class="form-control" type="text" id="usuario" ng-model="agregarUsuario.usuario" placeholder="Usuario" required>
+					
+					<input class="form-control" type="date" id="fnacimiento" ng-model="agregarUsuario.fnacimiento" placeholder="Fecha de Nacimiento" required>
+					
+					<input class="form-control" type="text" id="email" ng-model="agregarUsuario.dpto" placeholder="Departamento" required>
+					<button class="btn btn-primary pull-right" ng-click="agregarUsuario.AgregarUsuario();">Agregar Nuevo Usuario</button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="usuarios" ng-controller="MostrarUsuariosControlador as mostrarLista">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-md-10">
@@ -47,7 +64,7 @@
 											<th>No</th>
 											<th>Nombre</th>
 											<th>Apellido</th>
-											<th>Usuaurio</th>
+											<th>Usuario</th>
 											<th>Fecha Nacimiento</th>
 											<th>Departamento</th>
 											<th>Borrar</th>
@@ -55,7 +72,7 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr ng-repeat="persona in personas 
+										<tr ng-repeat="persona in mostrarLista.personas 
 														| filter:textoBusqueda
 														| orderBy:'fecha_nacimiento'"
 											ng-class="{success: persona.success, danger: persona.danger, warning: persona.warning}">
@@ -69,7 +86,7 @@
 											<!-- <td class="text-center"><input type="checkbox" ng-model="activa"></td>
 											<td class="text-center"><input type="checkbox" ng-model="inactiva"></td>
 											<td class="text-center"><input type="checkbox" ng-model="pendiente"></td> -->
-											<td><button type="button" class="btn btn-danger" ng-click="remover($index)">Borrar</button></td>
+											<td><button type="button" class="btn btn-danger" ng-click="mostrarLista.remover($index)">Borrar</button></td>
 										</tr>
 									</tbody>
 								</table>
