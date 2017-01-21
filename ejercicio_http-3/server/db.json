@@ -1,0 +1,18 @@
+{
+  "empleado": [
+    {
+      "nombre": "Abraham",
+      "apellido": "Garcia",
+      "departamento": "IT",
+      "edad": 30,
+      "id": 1
+    },
+    {
+      "nombre": "Edgar",
+      "apellido": "Garcia",
+      "departamento": "Mercadotecnia",
+      "edad": "40",
+      "id": 2
+    }
+  ]
+}
