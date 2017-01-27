@@ -1,0 +1,27 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "tornillo 1/4",
+      "identificador": "t14",
+      "precio": 5.50,
+      "peso": 0.02,
+      "unidad_medida": "kg"
+    }
+  ],
+
+  "ordenes": [
+    {
+      "id": 1,
+      "orden": "0001",
+      "precio_total": 200,
+      "cantidad_total": 4,
+      "productos": [
+        { "nombre": "tornillo 1/4" },
+        { "nombre": "tornillo 3/4" },
+        { "nombre": "barrote 2x4" },
+        { "nombre": "lamina 1/2" }
+      ]
+    }
+  ]
+}
